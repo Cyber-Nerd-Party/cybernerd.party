@@ -15,6 +15,7 @@
         default = import ./nix/devShells/default.nix { inherit self lib pkgs system; };
       };
       packages = {
+        hugo-build = import ./nix/packages/hugo/build.nix { inherit lib pkgs; };
         hugo-serve = import ./nix/packages/hugo/serve.nix { inherit lib pkgs; };
       };
     });
